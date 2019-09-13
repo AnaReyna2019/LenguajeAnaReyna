@@ -10,6 +10,7 @@ namespace Reserva_de_Vuelos.Modelos
     {
         public int Id { get; set; }
         public string Nombre{ get; set; }
+        public string avion { get; set; }
         public Categoria()
         {
 
