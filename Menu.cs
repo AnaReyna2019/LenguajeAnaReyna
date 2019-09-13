@@ -18,7 +18,7 @@ namespace Reserva_de_Vuelos
         Datos_ClientesBL _DatosClientesBL;
         FacturaBL _FacturasBL;
         UsuarioBL _usuarioBL;
-        private object SelecciondeVueloToolStripMenuItem;
+ 
 
         public object End { get; private set; }
 
@@ -64,7 +64,6 @@ namespace Reserva_de_Vuelos
 
             login.ShowDialog();
 
-            seleccionDeVueloToolStripMenuItem.Visible = login.UsuarioAutenticado.PuedeverSelecciondeVuelo;
             facturaToolStripMenuItem.Visible = login.UsuarioAutenticado.PuedeverFactura;
             reporteToolStripMenuItem.Visible = login.UsuarioAutenticado.puedeverReporte;
             reservasToolStripMenuItem.Visible = login.UsuarioAutenticado.puedeverReservas;
