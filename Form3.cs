@@ -46,5 +46,10 @@ namespace Reserva_de_Vuelos
         {
 
         }
+
+        private void Form3_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

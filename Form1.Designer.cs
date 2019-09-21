@@ -60,6 +60,10 @@
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.aerolineaTextBox = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             claseLabel = new System.Windows.Forms.Label();
             precioLabel = new System.Windows.Forms.Label();
             aerolineaLabel1 = new System.Windows.Forms.Label();
@@ -70,13 +74,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.busquedaVueloBLBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaVueloBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaVueloDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // claseLabel
             // 
             claseLabel.AutoSize = true;
             claseLabel.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            claseLabel.Location = new System.Drawing.Point(307, 103);
+            claseLabel.Location = new System.Drawing.Point(39, 138);
             claseLabel.Name = "claseLabel";
             claseLabel.Size = new System.Drawing.Size(43, 16);
             claseLabel.TabIndex = 5;
@@ -86,7 +91,7 @@
             // 
             precioLabel.AutoSize = true;
             precioLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            precioLabel.Location = new System.Drawing.Point(307, 129);
+            precioLabel.Location = new System.Drawing.Point(39, 164);
             precioLabel.Name = "precioLabel";
             precioLabel.Size = new System.Drawing.Size(51, 18);
             precioLabel.TabIndex = 7;
@@ -96,7 +101,7 @@
             // 
             aerolineaLabel1.AutoSize = true;
             aerolineaLabel1.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            aerolineaLabel1.Location = new System.Drawing.Point(307, 76);
+            aerolineaLabel1.Location = new System.Drawing.Point(39, 111);
             aerolineaLabel1.Name = "aerolineaLabel1";
             aerolineaLabel1.Size = new System.Drawing.Size(67, 16);
             aerolineaLabel1.TabIndex = 11;
@@ -128,7 +133,7 @@
             this.listaVueloBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.listaVueloBindingNavigator.Name = "listaVueloBindingNavigator";
             this.listaVueloBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.listaVueloBindingNavigator.Size = new System.Drawing.Size(581, 25);
+            this.listaVueloBindingNavigator.Size = new System.Drawing.Size(618, 25);
             this.listaVueloBindingNavigator.TabIndex = 0;
             this.listaVueloBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -237,7 +242,7 @@
             // 
             this.claseTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaVueloBindingSource, "Clase", true));
             this.claseTextBox.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.claseTextBox.Location = new System.Drawing.Point(380, 100);
+            this.claseTextBox.Location = new System.Drawing.Point(112, 135);
             this.claseTextBox.Name = "claseTextBox";
             this.claseTextBox.Size = new System.Drawing.Size(100, 22);
             this.claseTextBox.TabIndex = 6;
@@ -246,7 +251,7 @@
             // 
             this.precioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaVueloBindingSource, "Precio", true));
             this.precioTextBox.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.precioTextBox.Location = new System.Drawing.Point(380, 129);
+            this.precioTextBox.Location = new System.Drawing.Point(112, 164);
             this.precioTextBox.Name = "precioTextBox";
             this.precioTextBox.Size = new System.Drawing.Size(100, 22);
             this.precioTextBox.TabIndex = 8;
@@ -258,7 +263,7 @@
             this.comboBox1.DisplayMember = "Nombre";
             this.comboBox1.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(112, 77);
+            this.comboBox1.Location = new System.Drawing.Point(112, 59);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 24);
             this.comboBox1.TabIndex = 9;
@@ -272,7 +277,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(44, 80);
+            this.label1.Location = new System.Drawing.Point(41, 62);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(49, 16);
             this.label1.TabIndex = 10;
@@ -333,17 +338,55 @@
             // 
             this.aerolineaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaVueloBindingSource1, "Aerolinea", true));
             this.aerolineaTextBox.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.aerolineaTextBox.Location = new System.Drawing.Point(380, 73);
+            this.aerolineaTextBox.Location = new System.Drawing.Point(112, 108);
             this.aerolineaTextBox.Name = "aerolineaTextBox";
             this.aerolineaTextBox.Size = new System.Drawing.Size(100, 22);
             this.aerolineaTextBox.TabIndex = 12;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.listaVueloBindingSource, "Foto", true));
+            this.pictureBox1.Location = new System.Drawing.Point(432, 50);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(164, 114);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(429, 186);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "Agregar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(521, 186);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 15;
+            this.button2.Text = "Remover";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(581, 351);
+            this.ClientSize = new System.Drawing.Size(618, 351);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(aerolineaLabel1);
             this.Controls.Add(this.aerolineaTextBox);
             this.Controls.Add(this.listaVueloDataGridView);
@@ -366,6 +409,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.busquedaVueloBLBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaVueloBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaVueloDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -400,6 +444,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.TextBox aerolineaTextBox;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
 

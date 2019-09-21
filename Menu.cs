@@ -1,4 +1,5 @@
-﻿using Reserva_de_Vuelos.BL;
+﻿using Reserva_de_Vuelos;
+using Reserva_de_Vuelos.BL;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,7 +19,7 @@ namespace Reserva_de_Vuelos
         Datos_ClientesBL _DatosClientesBL;
         FacturaBL _FacturasBL;
         UsuarioBL _usuarioBL;
- 
+      
 
         public object End { get; private set; }
 
@@ -77,6 +78,25 @@ namespace Reserva_de_Vuelos
             formFactura.MdiParent = this;
             formFactura.CargarDatos(_FacturasBL, _DatosClientesBL, _BusquedaVueloBL);
             formFactura.Show();
+
+        }
+
+        private void reporteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var formReporteVuelo = new FormReporteVuelo();
+            formReporteVuelo.CargarDatos(_BusquedaVueloBL);
+            formReporteVuelo.MdiParent = this;
+
+            formReporteVuelo.Show();
+        }
+
+        private void reporteDeReservasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var formReportedeReservas = new FromReportedeReservas();
+            formReportedeReservas.CargarDatos(_FacturasBL, _DatosClientesBL);
+            formReportedeReservas.MdiParent = this;
+
+            formReportedeReservas.Show();
 
         }
     }

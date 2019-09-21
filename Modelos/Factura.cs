@@ -13,7 +13,7 @@ namespace Reserva_de_Vuelos.Modelos
         public int Id { get; set; }
         public DateTime Fecha { get; set; }
         public int ClienteId { get; set; }
-        public Datos_Clientes datos_clientes { get; set; }
+        public Datos_Clientes Datos_Clientes { get; set; }
         public double Subtotal { get; set; }
         public double Impuesto { get; set; }
         public double Total { get; set; }

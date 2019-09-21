@@ -12,8 +12,10 @@ namespace Reserva_de_Vuelos.Modelos
         public double Precio { get; set; }
         public int CategoriaId { get; set; }
         public Categoria Categoria { get; set; }
+        public byte[] Foto { get; set; }
         public string Clase { get; set; }
         public int Id { get; set; }
+        
 
         public BusquedaVuelo()
         {
@@ -27,7 +29,8 @@ namespace Reserva_de_Vuelos.Modelos
             Precio = precio;
             Clase = clase;
             Categoria = categoria;
-            CategoriaId = Categoria.Id; 
+            CategoriaId = Categoria.Id;
+
         }
 
         public static implicit operator BusquedaVuelo(int v)
